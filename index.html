@@ -1,33 +1,41 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/dropzone.js"></script>
-<link href="css/stylesheet.css" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link href="css/stylesheet.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/dropzone.js"></script>
+    <script src="js/javascript.js"></script>
+  </head>
 
-<h1>MTO • Dynamic Image Proof</h1>
-<div class="page-wrap">
-  <div class="controls">
-    <input class="controls__input" type="file" id="imageLoader" name="imageLoader" />
-    <label class="controls__label" for="name">First, choose an image.</label>
+  <body>
+    <h1>MTO • Dynamic Image Proof</h1>
+    <div class="page-wrap">
+      <div class="controls">
+        <input class="controls__input" type="file" id="imageLoader" name="imageLoader" />
+        <label class="controls__label" for="name">First, choose an image.</label>
 
-    <input class="controls__input" type="text" id="name" value="" onkeyup="DynamicText(this.id)" />
-    <label class="controls__label" for="name">Name</label>
+        <input class="controls__input" type="text" id="name" value="" onkeyup="DynamicText(this.id)" />
+        <label class="controls__label" for="name">Name</label>
 
-    <input class="controls__input" type="text" id="store" value="" onkeyup="DynamicText(this.id)" />
-    <label class="controls__label" for="store">Store</label>
+        <input class="controls__input" type="text" id="store" value="" onkeyup="DynamicText(this.id)" />
+        <label class="controls__label" for="store">Store</label>
 
-    <input class="controls__input" type="text" id="district" value="" onkeyup="DynamicText(this.id)" />
-    <label class="controls__label" for="district">District</label>
+        <input class="controls__input" type="text" id="district" value="" onkeyup="DynamicText(this.id)" />
+        <label class="controls__label" for="district">District</label>
 
-  </div>
-  <div id="canvas-wrap">
-    <canvas style="display:block" id="imageCanvas" width=400px height=400px>
-      <canvas id="canvasID"></canvas>
-    </canvas>
-  </div>
+      </div>
+      <div id="canvas-wrap">
+        <canvas style="display:block" id="imageCanvas" width=400px height=400px>
+          <canvas id="canvasID"></canvas>
+        </canvas>
+      </div>
 
-  <div>
-    <button class="controls__btn" id="download">Generate Image</button>
-  </div>
+      <div>
+        <button class="controls__btn" id="download">Generate Image</button>
+      </div>
 
-  <div id="generateCanvas"></div>
+      <div id="generateCanvas"></div>
 
-</div>
+    </div>
+  </body>
+</html>
